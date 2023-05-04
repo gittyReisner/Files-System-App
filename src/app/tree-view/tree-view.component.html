@@ -1,0 +1,18 @@
+<input class="centered-tag" type="text" placeholder="search files" (change)="onInput($event)">
+<div class="file-system">
+    <ul>
+        <li *ngFor="let folder of tree">
+          <span class="folder-name">{{ folder.name }}</span>
+          <ul>
+            <li *ngFor="let file of folder.files">
+              <span class="file-name">{{file}}</span>
+            </li>
+          </ul>
+          <ul *ngIf="folder.directories && folder.directories.length > 0" >
+            <li *ngFor="let subfolder of folder.directories">
+              <app-tree-view [tree]="subfolder"></app-tree-view>
+            </li>
+          </ul>
+        </li>
+    </ul>
+</div>
