@@ -18,5 +18,4 @@ To build the project, run the following command:
 ng build
 The build artifacts will be stored in the dist/ directory.
 
-Further help
-If you need further help or assistance with this project, please refer to the official Angular documentation or the documentation for the specific Web API being used.
+Remember to run the web api first before running this project to allow the data to arrive from the server
